@@ -32,9 +32,11 @@ servidor.use(session({
 el navegador/ordenador del usuario */
 
 /* establecemos las rutas */ //ruta para el index
-servidor.get("/",(req, res)=>{
+/*servidor.get("/",(req, res)=>{
     res.render("index.ejs", {msg: "mensaje desde mpde "});
-});
+}); */
+servidro.get("/", (res,req)=>{
+    res.render("hola"))
 //ruta login
 servidor.get("/login",(req, res)=>{
     res.render("login.ejs")

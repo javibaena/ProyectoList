@@ -1,0 +1,615 @@
+
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url(../fonts/Montserrat-Thin.ttf); 
+}
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(../fonts/Roboto\(3\)/); 
+}
+ /* Variables */
+:root{
+    --fuente-titulo: 'Roboto', sans-serif; 
+   /*   --fuente-cuerpo: 'hola', sans-serif; */
+     --peso-titulo: 700;
+     --peso-cuerpo: 400;
+     --size-h1: 25px;
+     --size-h2: 22px;
+     --size-h3: 16px;
+     --size-botton:13px;
+     --size-cuerpo: 16px;
+     --border-line: 4px solid #1f0808;
+     --fondo-blanco:#f9f4f1;
+     --color-negro:#1f0808;
+     --padding-web: 4%;
+     --margin-left: 20px;
+ }
+     
+ /* Normalizadores */
+*{
+    font-family: 'Roboto', sans-serif;
+     padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;
+ }
+ 
+/* reglas generales */
+header{
+    border: var(--border-line);
+    height: 20vh;
+    background-color: var(--fondo-blanco);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header h1{
+    padding-left: 35px;
+    font-size: 50px;
+   
+
+}
+.background{
+    border: var(--border-line);
+    width: 100vw;
+    background-color: var(--fondo-blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    height: 25vh;
+    padding:20px;
+    border: var(--border-line);
+    border-top: 0px;
+    border-bottom:1px solid #ccc;
+    background-color:var(--fondo-blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button{
+   width: 80vw;
+}
+.boton{
+    border: 1px solid black;
+    margin: 10px;
+    width: 55px;
+    height: 35px;
+    font-size: 16px;
+    background-color: var(--color-negro);
+    color: var(--fondo-blanco);
+    font-family: var(--fuente-titulo);
+    transition: 0.3s;
+    -webkit-appearance:none;
+    appearance:none;
+    display:block;
+    text-align:center;
+}
+.boton:hover{
+    background-color: var(--fondo-blanco);
+    color: var(--color-negro);
+    border: var(--border-line);
+}
+
+form input[type="text"]{
+    border: var(--border-line);
+    padding:5px;
+    color:#444;
+    margin:0 auto;
+}
+form input[type="submit"]{
+    width: 100px;
+    border:var(--border-line);
+    margin:20px auto 0;
+    cursor:pointer;
+    background-color: var(--color-negro);
+    color: var(--fondo-blanco);
+    transition: 0.3s;    
+}
+form input[type="submit"]:hover{
+    background-color: var(--fondo-blanco);
+    color: var(--color-negro);
+    border: var(--border-line);
+}
+/* fin de reglas generales */
+
+/* reglas index from */
+.listatareas{
+    width: 200px;
+    border-bottom: var(--border-line);
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 20px; 
+}
+.tareas{
+    background-color: var(--fondo-blanco);
+    width:80vw;
+    margin:0 auto 20px;
+}
+
+/* componente TAREA */
+.tarea .visible{
+    display:block;
+}
+
+.tarea .estado{
+    width:50px;
+    height:20px;
+    border-radius:10px;
+    border:none;
+    background-color:#222;
+    position:relative;
+    margin-top:20px;
+}
+.tarea{
+    margin: 10px;
+
+    border:var(--border-line);
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.tarea:first-child {
+    margin-top: 40px;
+  }  
+ .tarea h2,
+.tarea input{
+    overflow:scroll;
+    border: none;
+    border-bottom: 1px solid gray;
+   width: 80%;
+    font-size:1.2em;
+    color:#555;
+    text-align:left;
+    font-weight:normal;
+    display:none;
+    padding-left: 5px; 
+} 
+
+.tarea input{
+  
+    background-color:var(--fondo-blanco);
+    border-bottom:1px dashed #333;
+    padding-bottom:5px;
+} 
+ .tarea .visible{
+    width: 80%;
+    font-size: 18px;
+    display:block;
+}
+ .botoncin{
+    margin: 30px;
+
+    background-color:var(--color-negro);
+    width: 13px;
+    height: 13px;
+    border: 1px solid black;
+    border-radius: 50%;
+} 
+.ok{
+    background-color:#6fdb47;
+    transition:left 0.8s,background-color 1s;
+}
+.tarea .boton{
+    font-size: 13px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.tarea .estado{
+    width:50px;
+    height:20px;
+    border-radius:10px;
+    border:none;
+    background-color:#222;
+    position:relative;
+    margin-top:20px;
+}
+.videoFront{
+    border: none;
+    width: 250px;
+    height: 20vh;
+}
+ .logoutP{
+    position: relative;
+    bottom: 0px; 
+    width: 100px;
+    background-color: var(--color-negro);
+    color: var(--fondo-blanco);
+    margin: 40px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid black;
+}
+.logoutP:hover{
+    background-color: var(--fondo-blanco);
+    color: var(--color-negro);
+    border: var(--border-line);
+}
+.logout{
+    color: var(--fondo-blanco);
+}
+.logout:hover{
+    color: var(--color-negro);
+    border: var(--color-negro);
+}
+.invisible{
+    display: none;
+}
+footer{
+    width: 100%;
+    height: 21vh;
+    background-color: var(--color-negro);
+    color: var(--fondo-blanco);
+    font-size: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (min-width: 768px){
+
+    :root{
+        --fuente-titulo: 'Roboto', sans-serif; 
+       /*   --fuente-cuerpo: 'hola', sans-serif; */
+         --peso-titulo: 700;
+         --peso-cuerpo: 400;
+         --size-h1: 80px;
+         --size-h2: 60px;
+         --size-h3: 16px;
+         --size-botton:13px;
+         --size-cuerpo: 16px;
+         --border-line: 4px solid #1f0808;
+         --padding-web: 4%;
+         --margin-left: 20px;
+     }
+
+/* reglas generales */
+header{
+    height: 20vh;
+}
+header h1{
+    padding: 50px;
+    font-size: var(--size-h1);
+}
+
+form input, form button{
+   width: 70vw;
+}
+form input[type="text"]{
+    font-size: 20px;
+    height: 50px;
+}
+form input[type="submit"]{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    margin:25px auto 0;
+}
+/* fin de reglas generales */
+
+/* reglas index from */
+.listatareas{
+    width: 500px;
+    font-size: 40px;
+    margin: 30px;
+    margin-bottom: 30px;
+}
+
+.tareas{
+    margin:20px auto 20px;
+}
+/* componente TAREA */
+
+.tarea{
+    margin: 10px;
+    border:var(--border-line);
+    padding:20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-items:center;
+}
+.tarea:first-child {
+    margin-top: 40px;
+  }
+.tarea h2,
+.tarea input{
+    overflow:scroll;
+    border: none;
+    border-bottom: 1px solid gray;
+    width:80%;
+    font-size:1.5em;
+    color:#555;
+    text-align:left;
+    font-weight:normal;
+    display:none;
+}
+.tarea input{
+    background-color:var(--fondo-blanco);
+    border-bottom:1px dashed #333;
+    padding-bottom:5px;
+}
+.tarea .visible{
+    width: 90%;
+    font-size: 30px;
+}
+
+.botoncin{
+    margin: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.tarea .boton{
+    font-size: 15px;
+    width: 80px;
+    height: 35px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+ 
+.videoFront{
+    margin-top: 30px;
+    width: 530px !important;
+    height: 300px !important;
+}
+ .logoutP{
+    margin-top: 70px;
+    width: 150px;
+    height: 70px;  
+}
+
+.logout{
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    width: 150px;
+    height: 70px;
+    color: var(--fondo-blanco);
+}
+.logout:hover{
+    color: var(--color-negro);
+    border: var(--color-negro);
+}
+.invisible{
+    display: none;
+}
+footer{
+    text-align: center;
+    width: 100%;
+    background-color: var(--color-negro);
+    color: var(--fondo-blanco);
+    font-size: 70px;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1366px){
+    :root{
+        --size-h1: 100px;
+        --size-h2: 80px;
+        --size-h3: 34px;
+        --size-cuerpo:28px;
+    }
+    header{
+        height: 20vh;
+    }
+    header h1{
+        padding: 50px;
+        font-size: var(--size-h1);
+    }
+    form input, form button{
+       width: 70vw;
+    }
+    form input[type="text"]{
+        font-size: 25px;
+        height: 70px;
+    }
+    form input[type="submit"]{
+        width: 200px;
+        height: 70px;
+        font-size: var(--size-cuerpo);
+        margin:25px auto 0;
+    }
+    /* fin de reglas generales */
+    
+    /* reglas index from */
+    .listatareas{
+        width: 500px;
+        font-size: 40px;
+        margin: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .tareas{
+        margin:20px auto 20px;
+    }
+    /* componente TAREA */
+    
+    .tarea{
+        height: 20vh;
+        margin: 10px;
+        border:var(--border-line);
+        padding:20px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        align-items:center;
+    }
+    .tarea h2,
+    .tarea input{
+        font-size:25px;
+    }
+    .tarea input{
+        background-color:var(--fondo-blanco);
+        border-bottom:2px dashed #333;
+        padding-bottom:5px;
+    }
+    .tarea .visible{
+        font-size: 30px;
+    } 
+    .botoncin{
+        width: 22px;
+        height: 22px;
+    }
+    .tarea .boton{
+        font-size: var(--size-cuerpo);
+        width: 150px;
+        height: 70px;
+    } 
+    .videoFront{
+        margin-top: 30px;
+        width: 530px !important;
+        height: 300px !important;
+    }
+    .logoutP{
+        width: 200px;
+        height: 70px;
+    }
+    .logout{
+        width: 200px;
+        height: 70px;
+    }
+    footer{
+        height: 25vh;
+        font-size: 100px;
+    }
+
+}
+
+
+
+
+@media (min-width: 1920px){
+    :root{
+        --size-h1: 120px;
+        --size-h2: 100px;
+        --size-h3: 50px;
+        --size-cuerpo:48px;
+        --border-line: 8px solid #1f0808;
+        --color-destacado: #fff824;
+        --transform--2: 0.7s;
+    }
+    a{
+        transition: var(--transform--2);
+    }
+    .boton:hover{
+        background-color: var(--color-destacado);
+    } 
+    header{
+        height: 20vh;
+    }
+    header h1{
+        padding: 30px;
+        font-size: var(--size-h1);
+    }
+    form input[type="text"]{
+        font-size: 30px;
+        height: 80px;
+    }
+    form input[type="submit"]{
+        width: 300px;
+        height: 100px;
+        font-size: var(--size-cuerpo);
+        margin:25px auto 0;
+    }
+    form input[type="submit"]:hover{
+     background-color: var(--color-destacado);
+     color: var(--color-negro);
+    }
+    /* fin de reglas generales */
+    
+    /* reglas index from */
+    .listatareas{
+        width: 500px;
+        font-size: var(--size-h3);
+        margin: 30px;
+        margin-bottom: 30px;
+    }
+    /* componente TAREA */
+    
+    .tarea{
+        height: 35vh;
+        margin: 30px;
+        border:var(--border-line);
+        padding:20px;
+    }
+    .tarea h2,
+    .tarea input{
+        padding: 10px;
+        height: 70px;
+        font-size:40px !important;
+    }
+    .tarea input{
+        background-color:var(--fondo-blanco);
+        border-bottom:2px dashed #333;
+        padding-bottom:5px;
+    }
+
+    .botoncin{
+        width: 30px;
+        height: 30px;
+    }
+    .tarea .boton{
+        padding-top: 5px;
+        font-size: var(--size-cuerpo);
+        width: 200px;
+        height: 70px;
+    } 
+    .videoFront{
+        margin-top: 30px;
+        width: 600px !important;
+        height: 330px !important;
+    }
+    .logoutP{
+        width: 300px;
+        height: 100px;
+    }
+    .logout{
+        transition: var(--transform--2);
+        width: 300px;
+        height: 100px;
+        font-size: var(--size-cuerpo);
+    }
+
+    .logout:hover{
+        border: var(--border-line);
+        background-color: var(--color-destacado);
+        color: var(--color-negro);
+      
+    }
+    footer{
+        font-size: 100px;
+    }
+
+}
+
+
+
+
+

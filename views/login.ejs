@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+</head>
+<body>
+    <div class="marco">
+     <header>
+        <h2>/LOGIN</h2>
+        <a  class="atras" href="/"> 🔙</a>
+    </header>          
+            <div class="formularioLogin">
+                <form action="/auth" method="POST">
+                        <div class="usuario">
+                            <span>Usuario:</span>
+                            <input class="i" type="text" name="user" placeholder="Usuario" required>
+                        </div>
+
+                        <div class="password">
+                            <span>Password:</span> 
+                            <input  class="i" type="password" name="password" placeholder="password" required>
+                        </div>
+                   
+                        <input   class="boton" class="i2" class="botonLogin" type="submit" value="LOGIN" class="btnlogin">
+                        <a  class="boton"  class="i2" class="linkresgistro" href="register" class="btnregister">SIGN UP</a>
+                </form>
+
+                <div class="marcoVideo">
+                    <video  class="videoLogin" src="media/gif1.mp4" autoplay loop muted></video>
+               </div>                      
+        </div>
+        
+    </div>
+</body>
+</html> 

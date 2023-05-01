@@ -8,10 +8,10 @@ con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
 const conexeionUsarios = createConnection({
     Host: sql7.freesqldatabase.com
-    Database name: sql7615239
-    Database user: sql7615239
-    Database password: MXWQR7ftSI
-    Port number: 3306
+    name: sql7615239
+    user: sql7615239
+    password: MXWQR7ftSI
+    Port: 3306
     database:"login_node"
     
    /* host: "sql7.freesqldatabase.com",
@@ -43,10 +43,10 @@ function conectar(){
         try{
             let conexion = await mysql.createConnection({
                 Host: sql7.freesqldatabase.com
-                Database name: sql7615239
-                Database user: sql7615239
-                Database password: MXWQR7ftSI
-                Port number: 3306
+                name: sql7615239
+                user: sql7615239
+                password: MXWQR7ftSI
+                Port: 3306
                   database:"Tareas"
                 
                 

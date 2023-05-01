@@ -6,22 +6,24 @@ const { createConnection } = require("mysql2");
 /* configuramos la conexion con la bbaa, concretamente
 con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
-const conexeionUsarios = createConnection({
+/*const conexeionUsarios = createConnection({
     host: "http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=login_node",
     port: 8889,
     user:"root",
     password:"root",
     database:"login_node"
-})
+}) */
 
 /* con el metodo connect realizamos la conexion y compramos si hay algún error o no */
-conexeionUsarios.connect((error)=>{
+
+/*conexeionUsarios.connect((error)=>{
   if(error){
     throw error;
   }else{
     console.log("la conexion funciona")
   }
-})
+}) */
+
 
 /* configuramos la conexion con la bbaa, concretamente
 con la tabla tareas, permitira guardar informacion sobre las tareas*/

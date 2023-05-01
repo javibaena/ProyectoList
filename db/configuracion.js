@@ -7,7 +7,7 @@ const { createConnection } = require("mysql2");
 con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
 const conexeionUsarios = createConnection({
-    host: "http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=login_node",
+    host: "sql7.freesqldatabase.com",
     port: 8889,
     user:"root",
     password:"root",
@@ -35,7 +35,7 @@ function conectar(){
     return new Promise(async callback => {
         try{
             let conexion = await mysql.createConnection({
-                 host: "http://localhost:8888/phpMyAdmin5/index.php?route=/database/structure&db=Tareas",
+                 host: "sql7.freesqldatabase.com",
                  port: 8889,
                  user:"root",
                  password:"root",

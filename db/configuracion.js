@@ -130,4 +130,4 @@ function borrar(id){
 
 
 /* exportamos nuestras funciones que importaremos en el fichero index.js */
-module.exports ={conexeionUsarios,leer,crear,actualizar, borrar,actualizarTexto};
+module.exports ={leer,crear,actualizar, borrar,actualizarTexto};

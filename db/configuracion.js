@@ -8,21 +8,14 @@ con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
 const conexeionUsarios = createConnection({
   
-    Host: sql7.freesqldatabase.com
- 
-    user: "root",
-    password: "MXWQR7ftSI",
-    database:"login_node",
-    Port: 3306
-    
     
     
 
-   /* host: "sql7.freesqldatabase.com",
+host: "sql7.freesqldatabase.com",
     port: 8889,
     user:"root",
     password:"root",
-    database:"login_node"*/
+    database:"login_node"
 })
 
 /* con el metodo connect realizamos la conexion y compramos si hay algún error o no */
@@ -46,21 +39,15 @@ function conectar(){
     return new Promise(async callback => {
         try{
             let conexion = await mysql.createConnection({
-                 Host: sql7.freesqldatabase.com
+               
                 
-                 user: "root",
-                 password: "MXWQR7ftSI",
-                 database:"Tareas",
-                 Port: 3306
-                
-                
-                
-             /*    host: "sql7.freesqldatabase.com",
+             
+                host: "sql7.freesqldatabase.com",
                  port: 8889,
                  user:"root",
                  password:"root",
                  database:"Tareas"
-            }); */
+            }); 
             
         callback([null,conexion]);//[error,conexion]3
             

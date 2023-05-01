@@ -12,7 +12,7 @@ const conexeionUsarios = createConnection({
     
 
 host: "sql7.freesqldatabase.com",
-    port: 8889,
+    port:  3306,
     user:"root",
     password:"root",
     database:"login_node"

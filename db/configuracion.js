@@ -6,17 +6,17 @@ const { createConnection } = require("mysql2");
 /* configuramos la conexion con la bbaa, concretamente
 con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
-const conexeionUsarios = createConnection({
+/const conexeionUsarios = createConnection({
   
     
     
 
-host: "sql7.freesqldatabase.com",
+/*host: "sql7.freesqldatabase.com",
     port:  3306,
     user:"sql7615239",
     password:"MXWQR7ftSI",
     database:"login_node"
-})
+}) */
 
 /* con el metodo connect realizamos la conexion y compramos si hay algún error o no */
 
@@ -130,4 +130,4 @@ function borrar(id){
 
 
 /* exportamos nuestras funciones que importaremos en el fichero index.js */
-module.exports ={conexeionUsarios,leer,crear,actualizar, borrar,actualizarTexto};
+module.exports ={leer,crear,actualizar, borrar,actualizarTexto};

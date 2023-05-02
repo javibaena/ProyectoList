@@ -1,5 +1,5 @@
 const mysql = require("mysql2/promise");
-/*const { createConnection } = require("mysql2");
+const { createConnection } = require("mysql2");
 
 
 
@@ -49,7 +49,7 @@ function conectar(){
                  database:"Tareas"
             }); 
             
-        callback([null,conexion]);//[error,conexion]3
+        callback([null,conexion]);//[error,conexion]
             
         }catch(error){
             callback([error]);

@@ -20,7 +20,7 @@ con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
 /* con el metodo connect realizamos la conexion y compramos si hay algún error o no */
 
-conexeionUsarios.connect((error)=>{
+ /*conexeionUsarios.connect((error)=>{
   if(error){
     throw error;
   }else{

@@ -40,13 +40,17 @@ function conectar(){
         try{
             let conexion = await mysql.createConnection({
                
-                
+                  host: "localhost",
+                 port: 8889,
+                 user:"root",
+                 password:"root",
+                 database:"Tareas"
              
-                host: "sql7.freesqldatabase.com",
+                /*host: "sql7.freesqldatabase.com",
                  port:  3306,
                  user:"sql7615239",
                  password:"MXWQR7ftSI",
-                 database:"Tareas"
+                 database:"Tareas" */
             }); 
             
         callback([null,conexion]);//[error,conexion]

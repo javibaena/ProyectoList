@@ -6,7 +6,7 @@ const mysql = require("mysql2/promise");
 /* configuramos la conexion con la bbaa, concretamente
 con la tabla login_node, permitira guardar informacion sobre los usuarios */
 
-/const conexeionUsarios = createConnection({
+/*const conexeionUsarios = createConnection({
   
     
     
